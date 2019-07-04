@@ -36,17 +36,9 @@
       "node": true
     },
     "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
+      "plugin:vue/essential"
     ],
-    "rules": {
-      "linebreak-style": "off",
-      "generator-star-spacing": "off",
-      "no-irregular-whitespace": 0,
-      "no-multi-spaces": 0,
-      "space-before-function-paren": "0",
-      "semi": ["error", "never"]
-    },
+    "rules": {},
     "parserOptions": {
       "parser": "babel-eslint"
     }

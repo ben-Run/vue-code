@@ -1,0 +1,11 @@
+// mixin
+@import './variables.scss';
+
+
+@mixin color($color: $--ui-color-primary) {
+  color:$color;
+}
+
+@mixin bg-color($color: $--ui-color-primary) {
+  background-color: $color;
+}
