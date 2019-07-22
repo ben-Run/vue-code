@@ -1,11 +1,49 @@
 // mixin
 @import './variables.scss';
 
-
+// 颜色设置（$color：在variables里定义的变量）
 @mixin color($color: $--ui-color-primary) {
-  color:$color;
+	color: nth($color, 1);
+  // [data-theme="theme1"] & 
+  //   color: nth($color, 2);
 }
 
-@mixin bg-color($color: $--ui-color-primary) {
-  background-color: $color;
+// 颜色设置-透明度（$color：在variables里定义的变量）
+@mixin color-alpha($color: $--ui-color-primary, $alpha: 1) {
+	color: nth(rgba($color, $alpha), 1);
+}
+
+// 背景颜色设置（$bg-color：在variables里定义的变量）
+@mixin bg-color($bg-color: $--ui-color-background, $important: null) {
+	@if $important {
+		background-color: nth($bg-color, 1) !important;
+	} @else {
+		background-color: nth($bg-color, 1);
+	}
+}
+// 背景颜色设置-透明度（$bg-color：在variables里定义的变量）
+@mixin bg-color-alpha($bg-color: $--ui-color-background, $alpha: 1, $important: null) {
+	@if $important {
+		background-color: nth(rgba($bg-color, $alpha), 1) !important;
+	} @else {
+		background-color: nth(rgba($bg-color, $alpha), 1);
+	}
+}
+
+// 边框色设置（$border-color：在variables里定义的变量; $target: 只针对特定方位的边框，可缺省，值为top/left/right/bottom）
+@mixin border-color($border-color: $--ui-color-border, $target: null) {
+	@if $target {
+		border-#{$target}-color: nth($border-color, 1);
+	} @else {
+		border-color: nth($border-color, 1);
+	}
+}
+
+// 边框色设置（$border-color：在variables里定义的变量; $target: 只针对特定方位的边框，可缺省，值为top/left/right/bottom）
+@mixin border-color-alpha($border-color: $--ui-color-border, $alpha: 1, $target: null) {
+	@if $target {
+		border-#{$target}-color: nth(rgba($border-color, $alpha), 1);
+	} @else {
+		border-color: nth(rgba($border-color, $alpha), 1);
+	}
 }
