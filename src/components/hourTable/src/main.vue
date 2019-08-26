@@ -41,7 +41,7 @@
 * @Author: bensong.long
  * @Date: 2019-07-22
  * @Last Modified by: bensong.long
- * @Last Modified time: 2019-07-22 15:06:29
+ * @Last Modified time: 2019-08-26 17:29:52
  * 通用带标题表格组件
  * 示例：
  * 1、通过配置数据使用, 如 type: text => span, input => input，标题配置title, 值配置 value
@@ -133,7 +133,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import '@/style/mixin.scss';
 .hour-table-content {
   box-sizing: border-box;
   border-top: 1px solid;
@@ -174,7 +173,7 @@ export default {
       justify-content: center;
       border-bottom: 1px solid;
       @include border-color();
-      @include color();
+      @include color($--ui-color-blue);
     }
     .item-value, .item-value-desc {
       height: 40px;
@@ -195,7 +194,7 @@ export default {
       align-items: center;
       justify-content: center;
       @include border-color();
-      @include color();
+      @include color($--ui-color-blue);
     }
   }
 }

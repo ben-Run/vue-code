@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div id="nav">
-      this is demo
-    </div>
+    <p id="nav">this is tempDemo page</p>
     <router-view/>
   </div>
 </template>
@@ -17,6 +15,7 @@
 }
 #nav {
   padding: 30px;
+  font-size: 17px;
   a {
     font-weight: bold;
     color: #2c3e50;

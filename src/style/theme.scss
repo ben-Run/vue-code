@@ -1,1 +1,89 @@
-//
+body,
+div,
+span,
+header,
+footer,
+nav,
+section,
+aside,
+article,
+ul,
+dl,
+dt,
+dd,
+li,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+b,
+textarea,
+button,
+input,
+select,
+figure,
+figcaption {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  -webkit-font-smoothing: antialiased;
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+}
+ul, li{
+  list-style: none;
+  list-style-type:none;
+}
+html{
+  -ms-overflow-style:none;
+  height: 100%
+}
+body {
+  margin: 0;
+  height: 100%;
+  font-family: "Arial","Microsoft YaHei","黑体",sans-serif;
+  font-size: 14px;
+  @include color($--ui-font-color-content);
+}
+input,select,textarea,button{
+  outline:none !important;
+  -webkit-appearance: none; /*去除系统默认的样式*/
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
+  padding-left:0px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+}
+a{
+  text-decoration: none;
+  @include color();
+}
+
+// 箭头
+.jiantou {
+  width: 6px;
+  height: 10px;
+  background: url('../assets/images/common/jiantou.png') center no-repeat;
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  //padding: 0 7px;
+  cursor: pointer;
+}
+.toDown {
+  transform: rotate(90deg);
+}
+.toLeft {
+  transform: rotate(180deg);
+}
+.toRight {
+  transform: rotate(0deg);
+}
+.toUp {
+  transform: rotate(-90deg);
+}

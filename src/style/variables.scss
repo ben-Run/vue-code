@@ -34,6 +34,7 @@ $--ui-font-warning: red; 						// 错误提示或者警告文字
 $--ui-font-default-hover: #b0cbf7;		// 默认按钮悬浮文字用色
 $--ui-font-forbid: #7385a2;		// input禁止操作文字用色
 $--ui-font-profile: #b4bccc;		// placeholder文字用色(登录个例)
+$--ui-font-color-content: #FFFFFF;     // 页面默认字体颜色
 
 $--ui-btn-primary: #012e54;						// primary按钮背景色
 $--ui-btn-primary-hover: #012e54;			// primary按钮悬浮背景色
@@ -45,3 +46,6 @@ $--ui-step-icon-default: #464C5D;     // 步骤条默认图标用色
 $--ui-error-color:#f33958; // 错误信息
 
 $--ui-color-screen: #034C79; // 全屏及退出全屏按钮用色
+
+$--ui-bg-header-color:#FAFAFA;           // 次要模块背景颜色
+$--ui-border-color-sub: #D9D9D9;      // 次要边框颜色

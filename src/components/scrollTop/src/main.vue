@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { setInterval, clearInterval } from 'timers';
+
 export default {
   name: 'scrollTop',
   props: {
@@ -92,7 +92,6 @@ export default {
 </script>
 
 <style lang='scss' scoped>
-@import '@/style/mixin.scss';
 .main-content {
   width: 50px;
   height: 50px;
@@ -106,7 +105,7 @@ export default {
   transition: background-color .5s ease-out;
   .ico {
     font-size: 27px;
-    @include color();
+    @include color($--ui-color-blue);
   }
   &:hover {
     cursor: pointer;
