@@ -84,7 +84,7 @@ h3 {
 }
 .content-hourTable {
   margin: 0 auto;
-  width: 50%;
+  width: 80%;
 }
 .content-box {
   height: 800px;
@@ -108,7 +108,7 @@ h3 {
   }
 }
 .content-item-collapse {
-  font-size: 17px;
+  font-size: 14px;
   padding: 7px 15px;
   display: flex;
   align-items: center;

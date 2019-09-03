@@ -93,8 +93,8 @@ export default {
 
 <style lang='scss' scoped>
 .main-content {
-  width: 50px;
-  height: 50px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   position: fixed;
   box-shadow: 0px 0px 7px rgba(118, 118, 118, 0.5);
@@ -104,7 +104,7 @@ export default {
   justify-content: center;
   transition: background-color .5s ease-out;
   .ico {
-    font-size: 27px;
+    font-size: 16px;
     @include color($--ui-color-blue);
   }
   &:hover {
@@ -117,6 +117,6 @@ export default {
   }
 }
 .scroll-desc {
-  font-size: 12px;
+  font-size: 8px;
 }
 </style>
