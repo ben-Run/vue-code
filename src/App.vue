@@ -14,8 +14,8 @@
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
-  font-size: 17px;
+  padding: 10px;
+  font-size: 16px;
   a {
     font-weight: bold;
     color: #2c3e50;

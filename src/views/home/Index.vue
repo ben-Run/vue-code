@@ -29,6 +29,13 @@
           </template>
      </collapse>
      </div>
+
+     <div class="box menu-box">
+       <h3>menu</h3>
+       <section class="menu-content">
+         <menu-box :menu-data="item" v-for="(item,index) in menuList" :key="index" ></menu-box>
+       </section>
+     </div>
    </section>
 
    <scroll-top :visibility-height="triggerHeight"></scroll-top>
@@ -36,7 +43,7 @@
 </template>
 
 <script>
-import { initDataPrice, dataList } from './constant'
+import { initDataPrice, dataList, menuList } from './constant'
 export default {
   name: 'home-index',
   props: {},
@@ -50,7 +57,8 @@ export default {
     return {
       triggerHeight: 100, // 配置触发的高度
       valueList: [],
-      collapseList: []
+      collapseList: [],
+      menuList: menuList
     };
   },
   methods: {
@@ -77,18 +85,29 @@ export default {
 h3 {
   margin-bottom: 10px;
 }
-
+.box {
+  width: 80%;
+  margin: 10px auto;
+  padding: 10px 0;
+  border: 1px solid #ccc;
+}
+.menu-content {
+  width: 150px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #f0f0f0;
+}
+.content-hourTable {
+  width: 80%;
+  margin: 20px auto;
+  padding: 20px 0;
+}
 .content-item {
   padding-top: 30px;
   margin-bottom: 60px;
 }
-.content-hourTable {
-  margin: 0 auto;
-  width: 80%;
-}
+
 .content-box {
-  height: 800px;
-  border: 1px solid #f0f0f0;
   p {
     text-align: center;
     font-size: 16px;

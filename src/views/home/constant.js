@@ -34,16 +34,16 @@ let dataList = [
       desc: 100
     }, {
       title: 'Java',
-      desc: 100
+      desc: 200
     }, {
       title: 'Node',
-      desc: 100
+      desc: 300
     }, {
       title: '.Net',
-      desc: 100
+      desc: 400
     }, {
       title: 'php',
-      desc: 100
+      desc: 500
     }]  
   },
   {
@@ -61,7 +61,72 @@ let dataList = [
     }]  
   }
 ]
+
+let menuList = [
+  {
+    title: "web前端",
+    path: "",
+    children: [
+      {
+        title: "javaScript",
+        path: "/web/js"
+      },
+      {
+        title: "vue.js",
+        path: "",
+        children: [
+          {
+            title: "vue admin",
+            path: "/web/vue/A",
+            children: [
+              {
+                title: "vue admin page",
+                path: "/web/vue admin/vue page"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    title: "flutter",
+    path: "",
+    children: [
+      {
+        title: 'dart 介绍',
+        path: '/flutter/dart',
+        children: [
+          {
+            title: 'dart 第一章',
+            path: '/flutter/dart/01'
+          }
+        ]
+      },
+      {
+        title: 'flutter 垮平台',
+        path: '/flutter/index'
+      }
+    ]
+  },
+  {
+    title: "pwa",
+    path: "",
+    children: [
+      {
+        title: 'pwa demo',
+        path: '/pwa/index'
+      }
+    ]
+  },
+  {
+    title: "nodeJs",
+    path: "node/index"
+  }
+]
+
 export {
   initDataPrice,
-  dataList
+  dataList,
+  menuList
 }
