@@ -137,7 +137,7 @@ export default {
   box-sizing: border-box;
   border-top: 1px solid;
   border-left: 1px solid;
-  @include border-color();
+  @include border-color(#f0f0f0);
   & /deep/ {
     .el-form-item__content {
       line-height: initial;
@@ -165,14 +165,14 @@ export default {
     flex-direction: column;
     border-bottom: 1px solid;
     border-right: 1px solid;
-    @include border-color();
+    @include border-color(#f0f0f0);
     .item-title {
       height: 30px;
       display: flex;
       align-items: center;
       justify-content: center;
       border-bottom: 1px solid;
-      @include border-color();
+      @include border-color(#f0f0f0);
       @include color($--ui-color-blue);
     }
     .item-value, .item-value-desc {
@@ -186,6 +186,7 @@ export default {
         }
         .el-input__inner {
           text-align: center;
+          border: 1px solid #f0f0f0;
         }
       }
     }
