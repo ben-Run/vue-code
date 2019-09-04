@@ -92,7 +92,7 @@ h3 {
   border: 1px solid #ccc;
 }
 .menu-content {
-  width: 150px;
+  width: 250px;
   height: 300px;
   margin: 0 auto;
   background-color: #f0f0f0;
@@ -100,7 +100,6 @@ h3 {
 .content-hourTable {
   width: 80%;
   margin: 20px auto;
-  padding: 20px 0;
 }
 .content-item {
   padding-top: 30px;

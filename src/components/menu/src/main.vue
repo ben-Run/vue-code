@@ -63,12 +63,12 @@ export default {
 <style lang='scss' scoped>
 .menu-box {
     cursor: pointer;
-    max-width: 150px;
+    max-width: 250px;
     margin: 0 auto;
     background-color: transparent;
 
     .item-title {
-      font-size: 14px;
+      font-size: 16px;
       width: 100%;
       height: 100%;
       display: block;

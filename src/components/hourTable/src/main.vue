@@ -99,7 +99,10 @@ export default {
   methods: {
     showValidateInfo (val, result, msg) {
       if (!result && !!msg) {
-        this.$message.error(msg)
+        this.$message.error({
+          message: msg,
+          duration: 0
+        })
       }
     },
     // 检查
