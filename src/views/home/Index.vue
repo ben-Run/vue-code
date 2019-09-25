@@ -36,6 +36,11 @@
          <menu-box :menu-data="item" v-for="(item,index) in menuList" :key="index" ></menu-box>
        </section>
      </div>
+
+     <div class="box" v-newloading="showPop">
+       <el-button @click="showPop = !showPop">显示</el-button>
+       <el-button @click="showPop = !showPop">隐藏</el-button>
+     </div>
    </section>
 
    <scroll-top :visibility-height="triggerHeight"></scroll-top>
@@ -58,7 +63,8 @@ export default {
       triggerHeight: 100, // 配置触发的高度
       valueList: [],
       collapseList: [],
-      menuList: menuList
+      menuList: menuList,
+      showPop: false
     };
   },
   methods: {

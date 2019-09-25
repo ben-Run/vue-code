@@ -6,12 +6,15 @@ import store from '@/store/index';
 import '@/components/Index';
 import '@/style/Index.scss';
 import svgIcon from '@/components/svgIcon'
+import loadingDirective from '@/components/loading/index'
+
 // import setRem from '@/style/rem.js'
 
 // mobile rem
 // setRem(document, window)
 Vue.use(ElementUI);
 Vue.use(svgIcon)
+Vue.use(loadingDirective)
 Vue.config.productionTip = false;
 
 // all svg
