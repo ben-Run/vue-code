@@ -44,19 +44,27 @@
    </section>
 
    <scroll-top :visibility-height="triggerHeight"></scroll-top>
+
+   <!-- $attrs -->
+   <demo-a title='title' desc='desc' v-bind="$attrs"></demo-a>
  </article>
 </template>
 
 <script>
 import { initDataPrice, dataList, menuList } from './constant'
+import demoA from './demoA'
 export default {
   name: 'home-index',
   props: {},
   created () {
     this.init()
   },
-  mounted () {},
-  components: {},
+  mounted () {
+    console.log('index:',this.$attrs)
+  },
+  components: {
+    demoA
+  },
   computed: {},
   data () {
     return {

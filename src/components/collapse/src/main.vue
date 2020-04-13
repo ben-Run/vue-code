@@ -5,7 +5,6 @@
      <section :class="{'border-line': borderClass}" class="title-box">
        <span class="title">{{title || ''}}</span>
        <span class="desc">{{rightDesc || ''}}</span>
-       <!-- <i class="jiantou" :class="[icoDirection]"></i> -->
        <svg-icon class="jiantou" :class="[icoDirection]" name="ico-jiantou"></svg-icon>
      </section>
    </header>

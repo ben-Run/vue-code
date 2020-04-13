@@ -101,7 +101,7 @@ export default {
       if (!result && !!msg) {
         this.$message.error({
           message: msg,
-          duration: 0
+          duration: 1 * 1000
         })
       }
     },

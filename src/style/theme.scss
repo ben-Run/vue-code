@@ -63,7 +63,9 @@ a{
   text-decoration: none;
   @include color();
 }
-
+p {
+  margin: 10px 0;
+}
 // 箭头
 .jiantou {
   cursor: pointer;
