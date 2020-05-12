@@ -1,5 +1,6 @@
 // vue.config.js
 const path = require('path')
+const baseUrl = '/vueCode'
 
 function resolve (dir) {
   return path.join(__dirname, './', dir)
@@ -28,7 +29,7 @@ module.exports = {
     }
   },
   // 基本路径
-  publicPath: './',
+  publicPath: baseUrl,
   // 打包文件目录
   outputDir: 'dist',
   // 放置生成的静态资源 (js、css、img、fonts) 的 (相对于 outputDir 的) 目录

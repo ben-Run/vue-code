@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <p id="nav">this is tempDemo page</p>
+    <p id="nav">this is vue code page</p>
     <router-view/>
   </div>
 </template>
@@ -16,6 +16,7 @@
 #nav {
   padding: 10px;
   font-size: 16px;
+  margin-bottom: 30px;
   a {
     font-weight: bold;
     color: #2c3e50;

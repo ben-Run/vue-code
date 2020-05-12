@@ -31,7 +31,9 @@ export default {
       this.$emit('changeSend', '在组件C中传递过来的事件')
     },
     handleInput() {
-      this.$emit("changeMyData", this.desc); // // 在组件A中传递过来的事件
+      // $listeners 包含父级作用域事件监听器，传进来之后自动触发相应事件
+      this.$emit("changeMyData", this.desc); // 在组件A中传递过来的事件
+      this.$emit('changeSend', this.desc)
     }
   },
   filters: {}

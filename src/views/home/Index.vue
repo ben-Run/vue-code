@@ -47,6 +47,10 @@
 
    <!-- $attrs -->
    <demo-a title='title' desc='desc' v-bind="$attrs"></demo-a>
+   <section class="btn-nav-wrapper">
+     <el-button type="primary" @click="gotoRender">去render 看看</el-button>
+   </section>
+   
  </article>
 </template>
 
@@ -88,6 +92,11 @@ export default {
     },
     gotoDetail (val) {
       console.log(val)
+    },
+    gotoRender () {
+      this.$router.push({
+        path: '/render'
+      })
     }
   },
   watch: {},
@@ -153,5 +162,8 @@ h3 {
     text-align: right;
     padding-right: 16px;
   }
+}
+.btn-nav-wrapper {
+  margin-top: 30px;
 }
 </style>
