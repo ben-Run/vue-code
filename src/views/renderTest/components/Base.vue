@@ -29,6 +29,7 @@ export default {
     this.$slots.subtitle = this.$slots.subtitle || []
     return h(
       'article',
+      // '我是文本渲染',
       {
         class: 'wrapper',
         style: {
@@ -75,7 +76,6 @@ export default {
 
 <style lang='scss' scoped>
 .wrapper {
- 
  .btn-nav {
    padding: 7px 10px;
    border-radius: 5px;

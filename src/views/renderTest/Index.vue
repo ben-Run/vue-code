@@ -7,23 +7,38 @@
    <!-- 第二个 -->
    <second @change-data="changeData"></second>
    <h3 class="second">{{this.msg}}</h3>
+
+   <!-- 第三个 -->
+   <three>
+     <span message="测试scopedSlots，我是传入的message" slot-scope="props">{{props}}</span>
+   </three>
+
+   <!-- 第四个 -->
+   <jsx></jsx>
  </article>
 </template>
 
 <script>
 import baseRender from './components/Base'
 import second from './components/Second'
+import three from './components/Three'
+import Jsx from './components/Jsx'
 
 export default {
   name: 'renderIndex',
   components: {
     baseRender,
-    second
+    second,
+    three,
+    Jsx
   },
   props: {},
   data () {
     return {
-      msg: '这是一个默认值'
+      msg: '这是一个默认值',
+      slotProps: {
+        text: '作用域插槽传递'
+      }
     }
   },
   computed: {

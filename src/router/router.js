@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/views/home/Index.vue'
-import tableIndex from '@/views/table/Index.vue'
 
 Vue.use(Router);
 
