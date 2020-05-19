@@ -15,7 +15,28 @@ export default {
     return {}
   },
   computed: {},
-  watch: {},
+  watch: {
+    $route: {
+      handler (to, form, next) {
+        console.log('list watch')
+      }
+    }
+  },
+  activated () {
+    console.log('list activated')
+  },
+  beforeRouteEnter(to, from, next) {
+    console.log('list beforeRouteEnter')
+    next()
+  },
+  beforeRouteUpdate (to, from, next) {
+    console.log('list beforeUpdate')
+    next()
+  },
+  beforeRouteLeave(to, from, next) {
+    console.log('list beforeRouteLeave')
+    next()
+  },
   created () {},
   mounted () {},
   methods: {

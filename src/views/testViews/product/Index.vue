@@ -1,7 +1,9 @@
 <template>
  <article>
    <p>product index</p>
-   <router-view></router-view>
+   <keep-alive>
+     <router-view></router-view>
+   </keep-alive>
    <!-- <router-view></router-view> -->
  </article>
 </template>
@@ -15,7 +17,8 @@ export default {
     return {}
   },
   computed: {},
-  watch: {},
+  watch: {
+  },
   created () {},
   mounted () {},
   methods: {},
