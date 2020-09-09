@@ -51,6 +51,10 @@
      <el-button type="primary" @click="gotoRender">去render 看看</el-button>
    </section>
    
+    <section class="btn-nav-wrapper">
+     <el-button type="primary" @click="gotoCodeMirror">去codemirror 看看</el-button>
+   </section>
+
  </article>
 </template>
 
@@ -96,6 +100,11 @@ export default {
     gotoRender () {
       this.$router.push({
         path: '/render'
+      })
+    },
+    gotoCodeMirror () {
+      this.$router.push({
+        path: '/codemirror'
       })
     }
   },

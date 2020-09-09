@@ -7,14 +7,25 @@ import '@/components/Index';
 import '@/style/Index.scss';
 import svgIcon from '@/components/svgIcon'
 import loadingDirective from '@/components/loading/index'
+// 引入jshint用于实现js自动补全提示 
+import jshint from "jshint";
 
+// 编辑器
+import { codemirror } from "vue-codemirror";
+// import "codemirror/lib/codemirror.css";
 // import setRem from '@/style/rem.js'
 
 // mobile rem
 // setRem(document, window)
+// 引入jshint用于实现js自动补全提示 
+
+window.JSHINT = jshint.JSHINT
+
 Vue.use(ElementUI);
 Vue.use(svgIcon)
 Vue.use(loadingDirective)
+Vue.use(codemirror);
+
 Vue.config.productionTip = false;
 
 // all svg

@@ -40,6 +40,11 @@ export default new Router({
       path: '/prodectDetail',
       name: 'productNewDetail',
       component: () => import(/* webpackChunkName: "renderTest" */ '@/views/testViews/product/Detail.vue')
-    }
+    },
+    {
+      path: '/codemirror',
+      name: 'codemirrorIndex',
+      component: () => import(/* webpackChunkName: "renderTest" */ '@/views/codemirror/Index.vue')
+    },
   ],
 });
