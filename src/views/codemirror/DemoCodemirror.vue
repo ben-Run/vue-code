@@ -151,6 +151,7 @@
         }
         this.$refs['codemirror'].codemirror.setOption("lint", false);
         this.$nextTick(() => {
+          // 是否触发检查
           this.$refs['codemirror'].codemirror.setOption("lint", true);
         })
       },
