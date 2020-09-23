@@ -6,7 +6,9 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "testMyPromise": "promises-aplus-tests src/views/myPromise/promise3.js",
+    "dev": "nodemon ./src/views/myPromise/index.js -i "
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -33,6 +35,7 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.12.0",
+    "promises-aplus-tests": "^2.1.2",
     "sass-loader": "^7.3.1",
     "svg-sprite-loader": "^4.1.6",
     "vue-template-compiler": "^2.6.10"
