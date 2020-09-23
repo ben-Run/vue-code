@@ -34,7 +34,7 @@
     "chai": "^4.1.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
     "promises-aplus-tests": "^2.1.2",
     "sass-loader": "^7.3.1",
     "svg-sprite-loader": "^4.1.6",
