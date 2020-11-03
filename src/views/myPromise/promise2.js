@@ -8,11 +8,12 @@ const PENDING = 'PENDING',
       FULFILLED = 'FULFILLED',
       REJECTED = 'REJECTED';
 
+
 // 处理then返回结果的流程
 function resolvePromise(promise2, x, resolve, reject) {
-  if (promise2 === x) {
-    return reject(new TypeError('Chaining cycle detected for promise #<myPromise>'))
-  }
+if (promise2 === x) {
+  return reject(new TypeError('Chaining cycle detected for promise #<myPromise>'))
+}
 
   let called = false
 

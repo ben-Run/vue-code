@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>红绿灯</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        margin: 0 auto;
+      }
+      .hld {
+        width: 100px;
+        height: 100px;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+  <main>
+    <div class="hld"></div>
+  </main>
+  <script>
+  // 实现一个红绿灯，把一个圆形 div 按照绿色 3 秒，黄色 1 秒，红色 2 秒循环改变背景色
+  // async await 版本 先执行在睡眠等待
+  async function main() {
+    while(true) {
+      await changeColor('green', 3000)
+      await changeColor('yellow', 1000)
+      await changeColor('red', 2000)
+    }
+  }
+  async function changeColor(value, delay) {
+    const dom = document.querySelector('.hld')
+    dom.style.background = value
+    await sleepColor(delay)
+  }
+
+  function sleepColor(delay) {
+    return new Promise((resolve,rejected) => {
+      setTimeout(() => {
+        resolve()
+      }, delay);
+    })
+  }
+
+  // main()
+  // promise 版本
+   function main1() {
+      changeColor1('green', 3000).then(value => {
+      console.log(value)
+      changeColor1('yellow', 1000).then(value => {
+        console.log(value)
+        changeColor1('red', 2000).then(value => {
+          console.log(value)
+          main1()
+        })
+      })
+    })    
+  }
+
+   function changeColor1(value, delay) {
+    const dom = document.querySelector('.hld')
+    dom.style.background = value
+    return sleepColor1(value, delay)
+  }
+
+  function sleepColor1(value ,delay) {
+    return new Promise((resolve,rejected) => {
+      setTimeout(() => {
+        resolve(value)
+      }, delay);
+    })
+  }
+  main1()
+  
+  </script>
+  </body>
+</html>
