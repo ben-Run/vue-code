@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta name="App-Config" content="fullscreen=yes,useHistoryState=yes,transition=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>koa 中间件简单实现</title>
+    <style>
+      h3 {
+        text-align: center;
+      }
+    </style>
+    <script src="./composeDemo.js"></script>
+  </head>
+  <body>
+  <div>
+    <h3>koa 中间件next 简单实现</h3>
+  </div>
+
+  <script>
+     function a (ctx, next) {
+        
+        console.log('a')
+        next()
+        console.log('aa')
+      }
+
+      function b (ctx, next) {
+        console.log('b')
+        next()
+        console.log('bb')
+      }
+
+      function c (ctx, next) {
+        console.log('c')
+        next()
+        console.log('cc')
+      }
+
+      let fn = compose([a,b,c])
+
+      function nextDemo () {
+        console.log('所有中间件执行完毕，开始执行后面语句')
+      }
+
+      let ctx = {
+        req: 'req',
+        res: 'res'
+      }
+      
+      fn(ctx, nextDemo)
+      // 结果
+      // a、b、c、所有中间件执行完毕，开始执行后面语句、 aa、bb、cc
+  </script>
+  </body>
+</html>
